@@ -1,0 +1,16 @@
+[Unit]
+Description=Discord Bot (Python)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/discord-bot
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/opt/discord-bot/.env
+ExecStart=/bin/bash -lc '. /opt/discord-bot/.venv/bin/activate && python bot/main.py'
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
