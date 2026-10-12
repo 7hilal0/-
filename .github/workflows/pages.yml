@@ -1,3 +1,4 @@
+# Pages enabled by repository settings
 name: Deploy Maw'ed to GitHub Pages
 on:
   push:
